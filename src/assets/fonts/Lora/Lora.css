@@ -1,0 +1,17 @@
+/* Regular Lora Font */
+@font-face {
+  font-family: 'Lora';
+  src: url('./Lora-Regular.ttf') format('truetype'),
+       url('./Lora-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic Lora Font */
+@font-face {
+  font-family: 'Lora';
+  src: url('./Lora-Italic.ttf') format('truetype'),
+       url('./Lora-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}

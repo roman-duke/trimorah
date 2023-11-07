@@ -1,0 +1,65 @@
+@import url('./assets/fonts/Hind/Hind.css');
+@import url('./assets/fonts/Lora/Lora.css');
+@import url('./assets/fonts/SourceSans3/SourceSans3.css');
+
+/* Reset margins and padding on all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  scroll-behavior: smooth;
+
+  --primary-color-one: #fffaeb;
+  --primary-color-two: #b5ac62;
+  --secondary-color: #434343;
+  --accent-color: #4f7942;
+
+  font-size: 62.5%;
+}
+
+/* declare some CSS variables to be reused throughout the codebase */
+body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  font-family: 'SourceSans3', 'Hind', 'Lora';
+  font-size: 1.6rem;
+  color: #fff;
+
+  position: relative;
+}
+
+/* Set the default list and link styles to none */
+ul, ol {
+  list-style: none;
+}
+
+a { text-decoration: none; }
+
+/* Disable focus style for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Declare styles for the preloader and loader icons */
+.icon {
+  aspect-ratio: 1 / 1;
+  width: 8rem;
+
+  fill: var(--primary-color-one);
+}
+
+.logo-icon {
+  aspect-ratio: 1 / 1;
+  width: 6rem;
+
+
+  // fill: var(--accent-color);
+}

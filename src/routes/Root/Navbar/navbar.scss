@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  width: 100vw;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  // overflow: hidden;
+
+  .company-description {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    
+    .dash {
+      width: 3rem;
+      height: 0.3rem;
+      margin: 0.3rem 0;
+      
+      // background-color: var(--secondary-color);
+      background-color: #fff;
+    }
+  }
+}
+
+.navbar {
+
+  .nav-links-wrapper {
+    position: absolute;
+    overflow-x: hidden;
+    height: 100vh;
+    // width: 23rem;
+    width: 100vw;
+    right: 0;
+    top: 0;
+
+    .nav-links {
+      height: 100%;
+      // width: 18rem;
+      width: 100vw;
+      padding: 15rem 3rem;
+
+      position: absolute;
+      top: 0;
+      // right: -18rem;
+      right: -100vw;
+      z-index: 1;
+
+      background-color: var(--secondary-color);
+      font-family: "Hind";
+
+      .link {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+}
