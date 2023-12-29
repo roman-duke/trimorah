@@ -1,0 +1,85 @@
+.overview-section {
+  background-color: var(--primary-color-one);
+  $padding-top: calc(var(--section-padding) * 2.5);
+  padding-top: $padding-top;
+  padding-bottom: 4rem;
+  font-family: Hind;
+  font-size: 1.8rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0.2rem;
+    height: 4rem;
+    background-color: var(--accent-color);
+    position: absolute;
+    transform: translate(calc(50vw - var(--section-padding)), calc(0rem - ($padding-top + 2rem)));
+  }
+
+  .overview-header {
+    font-family: SourceSans3;
+    font-size: 3.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .overview-text {
+    font-size: 1.9rem;
+    text-align: justify;
+  }
+
+  .overview-list {
+    margin-top: 2.5rem;
+
+    li {
+      width: 100%;
+      height: 18rem;
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 3rem;
+      border: 0.2rem solid var(--secondary-color);
+      border-radius: 0.5rem;
+      padding: 2rem;
+
+      box-shadow: 0.3rem 0.3rem 0.5rem var(--accent-color);
+    }
+
+    .item-heading {
+      display: flex;
+      align-items: center;
+
+      .list-header {
+        font-weight: 600;
+        margin-left: 1rem;
+      }
+    }
+
+    .item-text {
+      text-align: justify;
+      font-size: 1.6rem;
+    }
+  }
+
+  .overview-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .demarcation {
+      width: 0.2rem;
+      height: 4rem;
+      background-color: var(--accent-color);
+    }
+
+    .overview-btn {
+      font-size: 1.2rem;
+      font-family: Lora;
+      text-transform: uppercase;
+  
+      background-color: #fff;
+      padding: 1.3rem 2.5rem;
+      box-shadow: 0.15rem 0.25rem 0.1rem #000;
+    }
+  }
+}

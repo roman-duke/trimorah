@@ -1,0 +1,99 @@
+.testimonial-section {
+  padding: calc(var(--section-padding) * 1) calc(var(--section-padding) * 0.75) 0;
+  overflow: hidden;
+
+  .testimonial-header {
+    font-family: Lora;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.2rem;
+  }
+
+  .intro {
+    margin: 1.5rem 0 2rem;
+    text-align: justify;
+    font-family: Hind;
+    font-size: 1.9rem;
+  }
+
+  .quote-slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .quote-wrapper {
+      display: flex;
+      position: relative;
+
+      .quote-slide {
+        width: 100%;
+        height: 42rem;
+        margin-right: 2rem;
+        border: 0.1rem solid var(--secondary-color);
+        border-radius: 1rem;
+        padding: 2rem;
+
+        font-size: 1.7rem;
+
+        .quote-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &:before {
+            content: '"';
+            text-align: end;
+            display: inline-block;
+            font-family: SpaceGrotesk;
+            font-size: 7rem;
+            font-weight: 600;
+            rotate: 180deg;
+          }
+
+          .quote {
+            font-family: Lora;
+            font-style: italic;
+            margin-top: 1.5rem;
+          }
+
+          .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 4rem;
+
+            .author-photo {
+              aspect-ratio: 1 / 1;
+              object-fit: cover;
+              width: 6.5rem;
+
+              border-radius: 50%;
+            } 
+          }
+        }
+      }
+    }
+  }
+
+  .test-navigation {
+    margin: 3rem 0;
+    .nav-list {
+      display: flex;
+      justify-content: center;
+
+      .item {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1.5rem;
+        border: 0.1rem solid var(--secondary-color);
+        box-shadow: 0.15rem 0.15rem;
+      }
+
+      .active {
+        background-color: #000;
+        box-shadow: 0.15rem 0.15rem #fff;
+      }
+    }
+  }
+}

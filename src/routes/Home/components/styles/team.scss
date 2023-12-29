@@ -1,0 +1,88 @@
+.team-section {
+  color: #fff;
+  background-color: #0d0d0dec;
+  padding: var(--section-padding) 0 0;
+  position: relative;
+
+  .team-header {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  
+  .team-intro {
+    font-family: Hind;
+    font-size: 1.9rem;
+    text-align: justify;
+
+    margin: 4.5rem 0; 
+    padding: 0 var(--section-padding); 
+  }
+
+  .figure-container {
+
+    .figure-wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      .figure-item {
+        position: relative;
+        width: 19.5rem;
+        height: 22.6rem;
+
+        &:nth-child(odd) {
+          border: 1px solid #4a4a4a;
+          border-width: 1px 1px 1px 0
+        }
+        
+        &:nth-child(even) {
+          border: 1px solid #4a4a4a;
+          border-width: 1px 0 1px 1px;
+        }
+
+        &:nth-child(3n + 1) {
+          background-color: #2b2b2b;
+        }
+
+        .figure {
+          height: 100%;
+          
+          .team-img {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+  
+            object-fit: cover;
+            object-position: center;
+
+            border-radius: 50%;
+          }
+
+          .img-title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 2rem;
+
+            .info {
+              display: block;
+              margin-top: 1.5rem;
+
+              .img-title-header {
+                color: var(--accent-color);
+              }
+
+              .img-title-text {
+                font-weight: 400;
+                padding: 2rem;
+                // text-align: justify;
+              }
+
+              .work-experience-dur {
+                color: var(--accent-color);
+                font-size: 3.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
