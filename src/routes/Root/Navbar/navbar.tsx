@@ -1,3 +1,4 @@
+import TrimorahLogo from "../../../assets/images/trimorah_logo.png";
 import Curve from "./curve/curve";
 import { Variants, motion } from 'framer-motion';
 import { useState, useRef, RefObject } from 'react';
@@ -78,7 +79,7 @@ export default function Navbar() {
   return (
     <header className="header">
       <div className="company-description">
-        <img className="company-img" src="/src/assets/images/trimorah_logo.png" />
+        <img className="company-img" src={TrimorahLogo} />
         <h1 className="company-title">Trimorah</h1>
       </div>
 

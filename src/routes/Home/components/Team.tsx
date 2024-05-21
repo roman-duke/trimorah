@@ -1,3 +1,7 @@
+import MusaImg from "../../../assets/images/blah.jpg";
+import SarahImg from "../../../assets/images/sarah.jpg";
+import JibrilImg from "../../../assets/images/jibril.jpg";
+import NabeelImg from "../../../assets/images/nabeel.jpg";
 import './styles/team.scss';
 import Slider from "../slider";
 
@@ -19,7 +23,7 @@ export default function Team() {
             >
               <img 
                 className="team-img" 
-                src='src/assets/images/nabeel.jpg' 
+                src={NabeelImg} 
               />
               <figcaption className="img-title">
                 <span className="team-person">Nabeel</span>
@@ -43,7 +47,7 @@ export default function Team() {
             >
               <img 
                 className="team-img" 
-                src="src/assets/images/musa.jpg" 
+                src={MusaImg} 
               />
               <figcaption className="img-title">
                 <span className="team-person">Badaru Musa</span>
@@ -66,7 +70,7 @@ export default function Team() {
             >
               <img 
                 className="team-img" 
-                src="src/assets/images/sarah.jpg" 
+                src={SarahImg}
               />
               <figcaption className="img-title">
                 <span className="team-person">Sarah Tanko</span>
@@ -89,7 +93,7 @@ export default function Team() {
             >
               <img 
                 className="team-img" 
-                src="src/assets/images/jibril.jpg" 
+                src={JibrilImg}
               />
               <figcaption className="img-title">
                 <span className="team-person">Jibril</span>

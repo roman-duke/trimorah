@@ -1,3 +1,4 @@
+import heroImg from "../../assets/images/trimorah-hero-drone.png";
 import { useScroll, useTransform } from 'framer-motion';
 // import Overview from './components/Overview';
 // import Products from './components/Products';
@@ -26,7 +27,7 @@ export default function Home() {
   return (  
     <>
       <section className="hero-section">
-        <img className="hero-img" src="/src/assets/images/trimorah-hero-drone.png"/>
+        <img className="hero-img" src={heroImg} />
         <div className="hero-container">
           <h1 className="hero-header">Smart Farming, Brilliant Harvests</h1>
           <p className="hero-text">Welcome to the era of smart farming, where brilliance meets the harvest. 

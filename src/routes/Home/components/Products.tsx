@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import RightArrow from '../../../assets/icons/rightarrow';
+import beeDrone from "../../../assets/images/bee_drone.jpg";
+import optimusDrone from "../../../assets/images/optimus.jpg";
 import './styles/products.scss';
 
 export default function Products() {
@@ -24,7 +26,7 @@ export default function Products() {
           viewport={{once: true}}
           onViewportEnter={() => setIsInView(true)}
         >
-          <img className="product-img" src="/src/assets/images/bee_drone.jpg" alt="Image of the Bumblebee Drone"/>
+          <img className="product-img" src={beeDrone} alt="Image of the Bumblebee Drone"/>
           <figcaption className="img-caption special">
             <span className="img-desc">This is Bumble Bee</span>
             <div className="img-buttons">
@@ -48,7 +50,7 @@ export default function Products() {
             viewport={{once: true}}
             onViewportEnter={() => setIsInView(true)}
           >
-            <img className="product-img" src="/src/assets/images/optimus.jpg" alt="Image of the Optimus Drone"/>
+            <img className="product-img" src={optimusDrone} alt="Image of the Optimus Drone"/>
             <figcaption className="img-caption">
               <span className="img-desc">This is Optimus</span>
               <div className="img-buttons">
