@@ -1,4 +1,4 @@
-import MusaImg from "../../../assets/images/blah.jpg";
+import MusaImg from "../../../assets/images/musa.jpg";
 import SarahImg from "../../../assets/images/sarah.jpg";
 import JibrilImg from "../../../assets/images/jibril.jpg";
 import NabeelImg from "../../../assets/images/nabeel.jpg";
