@@ -1,12 +1,17 @@
 import { useScroll, useTransform } from 'framer-motion';
-import Overview from './components/Overview';
-import Products from './components/Products';
+// import Overview from './components/Overview';
+// import Products from './components/Products';
 // import Testimonial from './components/Testimonial';
-import Team from './components/Team';
+// import Team from './components/Team';
 // import News from './components/News';
 import Contact from './components/Contact';
 import './home.scss'
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
+
+const Overview = lazy(() => import('./components/Overview'));
+const Products = lazy(() => import('./components/Products'));
+const Team = lazy(() => import('./components/Team'));
+// const Contact = lazy(() => import('./components/Contact'));
 
 export default function Home() {
 
@@ -21,9 +26,7 @@ export default function Home() {
   return (  
     <>
       <section className="hero-section">
-        <Suspense>
-          <img className="hero-img" src="/src/assets/images/trimorah-hero-drone.png"/>
-        </Suspense>
+        <img className="hero-img" src="/src/assets/images/trimorah-hero-drone.png"/>
         <div className="hero-container">
           <h1 className="hero-header">Smart Farming, Brilliant Harvests</h1>
           <p className="hero-text">Welcome to the era of smart farming, where brilliance meets the harvest. 
@@ -34,13 +37,13 @@ export default function Home() {
 
       <Overview background={bg}/>
 
-      <Products />
+      <Suspense>
+        <Products />
+      </Suspense>
 
-      {/* <Testimonial /> */}
-
-      <Team />
-
-      {/* <News /> */}
+      <Suspense>
+        <Team />
+      </Suspense>
 
       <Contact />
     </>
