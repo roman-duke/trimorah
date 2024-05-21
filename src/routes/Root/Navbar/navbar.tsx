@@ -1,12 +1,15 @@
-import LogoIcon from "../../../assets/icons/logo";
 import Curve from "./curve/curve";
 import { Variants, motion } from 'framer-motion';
 import { useState, useRef, RefObject } from 'react';
+import LinkedInIcon from "../../../assets/icons/linkedin";
+import InstagramIcon from "../../../assets/icons/instagram";
+import EmailIcon from "../../../assets/icons/email";
+import { cubicBezier } from "framer-motion/dom";
 import './navbar.scss';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const elementRef: RefObject<HTMLUListElement> = useRef(null);
+  const elementRef: RefObject<HTMLDivElement> = useRef(null);
   
   const dashVariants: Variants = {
     open: i => ({
@@ -22,8 +25,9 @@ export default function Navbar() {
     }),
 
     closed: i => ({
-      backgroundColor: "#434343",
+      // backgroundColor: "#434343",
       // backgroundColor: "#fff",
+      backgroundColor: "#000",
       rotate: 0,
       y: 0,
       x: 0,
@@ -37,20 +41,23 @@ export default function Navbar() {
 
   const navBgVariants: Variants = {
     initial: {
-      x: 50
+      x: 100
     },
 
     open: {
-      x: (elementRef.current ? -(elementRef.current?.clientWidth) : undefined),
+      x: (elementRef.current ? -(elementRef.current?.clientWidth - 50) : undefined),
       transition: {
-        type: 'tween',
+        // type: 'tween',
+        ease: cubicBezier(0.61, 1, 0.88, 1),
         staggerChildren: 0.1
-      }
+      },
+      // border: '50%',
     },
 
     closed: {
-      x: 50,
+      x: 100,
       transition: {
+        ease: cubicBezier(0.61, 1, 0.88, 1),
         duration: 0.5,
       }
     }
@@ -71,8 +78,8 @@ export default function Navbar() {
   return (
     <header className="header">
       <div className="company-description">
-        <LogoIcon />
-        <h1 className="company-title">M3W.</h1>
+        <img className="company-img" src="/src/assets/images/trimorah_logo.png" />
+        <h1 className="company-title">Trimorah</h1>
       </div>
 
       <nav className="navbar">
@@ -91,25 +98,47 @@ export default function Navbar() {
           ))}
         </motion.div>
 
-        
-        <div className="nav-links-wrapper">  
-          <motion.ul 
-            ref={elementRef}
-            className="nav-links"
-            initial="initial"
-            animate={isOpen ? "open" : "closed"}
-            variants={navBgVariants}
-          >
-            {linksData.map((item, idx) => (
-              <motion.li key={idx} 
-                  initial={false}
-                  className="link"
-                  variants={navLinkVariants}
-              >{item.description}</motion.li>
-            ))}
-            <Curve isOpen={isOpen}/>
-          </motion.ul>
-        </div>
+        <motion.div 
+          ref={elementRef}
+          className="nav-links"
+          initial="initial"
+          animate={isOpen ? "open" : "closed"}
+          variants={navBgVariants}
+        > 
+          <div className="nav-main">
+            <h5 className="main-header">Navigation</h5>
+            <ul>
+              {linksData.map((item, idx) => (
+                <motion.li key={idx} 
+                    initial={false}
+                    className="link"
+                    variants={navLinkVariants}
+                >{item.description}</motion.li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="nav-socials">
+            <h5 className="socials-footer">Socials</h5>
+            <div className="social-links">
+              <a>
+                <LinkedInIcon />
+                <span>Linkedin</span>
+              </a>
+
+              <a>
+                <InstagramIcon />
+                <span>Instagram</span>
+              </a>
+
+              <a>
+                <EmailIcon />
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+          <Curve isOpen={isOpen}/>
+        </motion.div>
       </nav>
     </header>
   )

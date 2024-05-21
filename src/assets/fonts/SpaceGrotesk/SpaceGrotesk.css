@@ -1,0 +1,6 @@
+/* Medium SpaceGrotesk Font */
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('./SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+}

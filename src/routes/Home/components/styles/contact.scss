@@ -92,3 +92,18 @@
     z-index: 0;
   }
 }
+
+
+@media screen and (min-width: 760px) {
+  .contact-section {
+    .contact-container {
+      margin-top: 2rem;
+      width: 640px;
+      margin: auto;
+    }
+
+    .canvas-container {
+      margin-bottom: 2rem;
+    }
+  }
+}

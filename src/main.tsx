@@ -7,6 +7,7 @@ import {
   Route 
 } from 'react-router-dom';
 import Root from './routes/Root/root';
+import Home from './routes/Home/home';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,7 +16,10 @@ const router = createBrowserRouter(
       element={<Root />}
       // errorElement={<ErrorPage />}
     >
-      
+      <Route
+        path="/" 
+        element={<Home />}
+      />
     </Route>
   )
 )

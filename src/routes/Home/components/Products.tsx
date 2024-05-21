@@ -11,29 +11,29 @@ export default function Products() {
 
   return (
     <motion.section className="products-section">
-       <div className="product-container">
-          <motion.figure
-            className="figure-container"
-            initial={false}
-            animate={
-              isInView 
-                ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-                : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-            }
-            transition={{ duration: 1, delay: 1 }}
-            viewport={{once: true}}
-            onViewportEnter={() => setIsInView(true)}
-          >
-            <img className="product-img" src="/src/assets/images/bee_drone.jpg" alt="Image of the Bumblebee Drone"/>
-            <figcaption className="img-caption special">
-              <span className="img-desc">This is Bumble Bee</span>
-              <div className="img-buttons">
-                <button>Learn More <RightArrow className="reg-btn"/></button>
-                <button>Buy <RightArrow className="reg-btn"/></button>
-              </div>
-            </figcaption>
-          </motion.figure>
-        </div>
+      <div className="product-container">
+        <motion.figure
+          className="figure-container"
+          initial={false}
+          animate={
+            isInView 
+              ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+              : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+          }
+          transition={{ duration: 1, delay: 1 }}
+          viewport={{once: true}}
+          onViewportEnter={() => setIsInView(true)}
+        >
+          <img className="product-img" src="/src/assets/images/bee_drone.jpg" alt="Image of the Bumblebee Drone"/>
+          <figcaption className="img-caption special">
+            <span className="img-desc">This is Bumble Bee</span>
+            <div className="img-buttons">
+              <button>Learn More <RightArrow className="reg-btn"/></button>
+              <button>Buy <RightArrow className="reg-btn"/></button>
+            </div>
+          </figcaption>
+        </motion.figure>
+      </div>
         
         <div className="product-container">  
           <motion.figure 

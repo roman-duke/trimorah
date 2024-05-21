@@ -37,15 +37,16 @@ export default function Overview({ background } : MotionStyle) {
       className="overview-section"
       style={{ background }}
     >
+      <div className="overview-container">
         <h2 className="overview-header">
           From 
           <motion.span initial="initial" whileInView="inView" variants={overviewHeader} viewport={{ once: true}}> Fields</motion.span> to the 
           <motion.span initial="initial" whileInView="inView" variants={overviewHeader} viewport={{ once: true}}> Sky:</motion.span> 
-          <motion.span initial="initial" whileInView="inView" variants={overviewHeader} viewport={{ once: true}}> M3W</motion.span> in 
+          <motion.span initial="initial" whileInView="inView" variants={overviewHeader} viewport={{ once: true}}> Trimorah</motion.span> in 
           <motion.span initial="initial" whileInView="inView" variants={overviewHeader} viewport={{ once: true}}> Focus</motion.span>
         </h2>
 
-        <p className="overview-text">This is M-Tech, where innovation and agriculture converge to redefine 
+        <p className="overview-text">This is Trimorah, where innovation and agriculture converge to redefine 
           the future of farming. Our journey is rooted in a vision to revolutionize 
           traditional farming practices using cutting-edge drone technology.
         </p>
@@ -68,8 +69,13 @@ export default function Overview({ background } : MotionStyle) {
                 <InspectionIcon /><span className="list-header">Precision Crop Monitoring</span>
               </div>
               <p className="item-text">
-                Monitor crop health, detect diseases early, and optimize 
-                resource allocation for a more bountiful harvest.
+                Trimorah's approach to crop monitoring utilizes advanced sensors
+                and satellite imagery to provide farmers with a detailed understanding
+                of crop health.&nbsp;
+                <span className="lg-text">
+                  This technology enables the detection of plant diseases and post infestations
+                  at early stages, allowing for timely interventions that prevent widespread damage.
+                </span>
               </p>
             </motion.div>
           </motion.li>
@@ -86,8 +92,13 @@ export default function Overview({ background } : MotionStyle) {
                 <ManagementIcon /><span className="list-header">Smart Farm Management</span>
               </div>
               <p className="item-text">
-                From automated field analysis to real-time data insights, streamline 
-                your farm management and boost productivity like never before.
+                This service integrates cutting-edge AI and machine learning technologies to 
+                offer a comprehensive farm management system.&nbsp;
+                <span className="lg-text">
+                  Trimorah's platform collects and processes data from various sources, including
+                  ground sensors, drones, and equipment, providing farmers with actionable insights
+                  and predictive analytics.
+                </span>
               </p>
             </motion.div>
           </motion.li>
@@ -104,6 +115,7 @@ export default function Overview({ background } : MotionStyle) {
             View Products
           </button>
         </div>
+      </div>
     </motion.section>
   )
 }

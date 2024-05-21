@@ -15,3 +15,11 @@
   font-weight: 400;
   font-style: italic;
 }
+
+/* Semibold Italic Lora Font */
+@font-face {
+  font-family: 'Lora';
+  src: url('./Lora-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}

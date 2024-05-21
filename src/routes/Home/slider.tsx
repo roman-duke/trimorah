@@ -53,7 +53,7 @@ export default function Slider({children} : AuxProps) {
   // We only have a fixed number of slides, but we paginate them absolutely (ie 1, 2, 3, 4, 5,...) and 
   // then wrap that within the 0-(no. of slides - 1) to find our slide ID in the array. 
 
-  const slideIndex = wrap(0, 3, page);
+  const slideIndex = wrap(0, 4, page);
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);

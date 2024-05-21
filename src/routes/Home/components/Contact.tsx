@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import { motion, useInView } from 'framer-motion';
 import EarthCanvas from './canvas/Earth';
 import StarsCanvas from "./canvas/Stars";
@@ -56,11 +56,13 @@ export default function Contact() {
         </form>  
       </motion.div>
 
-      <motion.div
-        className="canvas-container"
-      >
-        <EarthCanvas />
-      </motion.div>
+      <Suspense>
+        <motion.div
+          className="canvas-container"
+        >
+          <EarthCanvas />
+        </motion.div>
+      </Suspense>
 
       <StarsCanvas />
     </section>

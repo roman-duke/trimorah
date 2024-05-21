@@ -7,6 +7,11 @@
   font-size: 1.8rem;
   position: relative;
 
+  .overview-container {
+    max-width: 1140px;
+    margin: auto;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -58,6 +63,10 @@
     .item-text {
       text-align: justify;
       font-size: 1.6rem;
+
+      .lg-text {
+        display: none;
+      }
     }
   }
 
@@ -80,6 +89,35 @@
       background-color: #fff;
       padding: 1.3rem 2.5rem;
       box-shadow: 0.15rem 0.25rem 0.1rem #000;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1060px) {
+  .overview-section {
+    // max-width: 1140px;
+
+    .overview-list {
+      display: flex;
+      gap: 4rem;
+
+      li {
+        display: flex;
+        height: 25rem;
+
+        div {
+          align-self: flex-start;
+        }
+      }
+    }
+
+    .overview-list {
+      .item-text {
+        .lg-text {
+          display: inline;
+        }
+      }
     }
   }
 }

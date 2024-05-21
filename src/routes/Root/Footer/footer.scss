@@ -23,6 +23,7 @@
           display: flex;
           justify-content: space-between;
           position: relative;
+          cursor: pointer;
           z-index: 10;
 
           margin-bottom: .7rem;
@@ -149,6 +150,30 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+}
+
+
+@media screen and (min-width: 760px) {
+  .footer-section {
+    .footer-nav {
+      max-width: 800px;
+      margin: auto;
+
+      .nav-list {
+        grid-template-columns: auto auto auto auto;
+        gap: 3rem;
+        
+        .nav-item {
+          border: 0;
+        }
+
+        .newsletter-container {
+          grid-column: 1 / 5;
+          margin-top: 0;
+        }
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 @import url('./assets/fonts/Hind/Hind.css');
 @import url('./assets/fonts/Lora/Lora.css');
 @import url('./assets/fonts/SourceSans3/SourceSans3.css');
+@import url('./assets/fonts/SpaceGrotesk/SpaceGrotesk.css');
 
 /* Reset margins and padding on all elements */
 * {
@@ -16,6 +17,7 @@
   --primary-color-one: #fffaeb;
   --primary-color-two: #b5ac62;
   --secondary-color: #434343;
+  --secondary-color-two: #bdbdbd;
   --accent-color: #4f7942;
 
   font-size: 62.5%;
@@ -31,9 +33,11 @@ body {
 
   font-family: 'SourceSans3', 'Hind', 'Lora';
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--secondary-color);
 
-  position: relative;
+  --gap-padding: clamp(1rem, 6vw, 2rem);
+  --section-padding: clamp(2.5rem, 5vh, 3.5rem);
+  // --container-padding: clamp();
 }
 
 /* Set the default list and link styles to none */
@@ -41,7 +45,7 @@ ul, ol {
   list-style: none;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: #000; }
 
 /* Disable focus style for mouse users */
 :focus:not(:focus-visible) {
@@ -59,7 +63,45 @@ a { text-decoration: none; }
 .logo-icon {
   aspect-ratio: 1 / 1;
   width: 6rem;
+}
 
+.socials-icon {
+  aspect-ratio: 1 / 1;
+  width: 2.5rem;
+  fill: var(--primary-color-one);
+}
 
-  // fill: var(--accent-color);
+.regular-icon {
+  aspect-ratio: 1 / 1;
+  width: 4rem;
+  fill: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.accent-btn, .reg-btn {
+  aspect-ratio: 1 / 1;
+  width: 1rem;
+}
+
+.accent-btn {
+  fill: var(--accent-color);
+}
+
+.reg-btn {
+  fill: #fff;
+}
+
+button {
+  border: none;
+  background-color: unset;
+  padding: 1rem 3.5rem;
+  margin-top: 1rem;
+
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 2rem;
+}
+
+section {
+  padding: var(--section-padding) var(--section-padding) calc(var(--section-padding) * 2.5);
+  line-height: 3rem;
 }

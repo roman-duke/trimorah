@@ -4,6 +4,8 @@ import './root.scss'
 import Navbar from './Navbar/navbar';
 // import Loader from './loader'
 // import { AnimatePresence } from 'framer-motion';
+import Footer from './Footer/footer';
+import { Outlet } from 'react-router-dom';
 
 export default function Root() {
   // const [loading, setLoading] = useState(true);
@@ -14,6 +16,12 @@ export default function Root() {
     //     <Loader key="loader" setLoading={setLoading}/>
     //    : <div className="random">Hello World!</div>}
     // </AnimatePresence>
-    <Navbar />
+    <>
+      <Navbar />
+      <main className="slot">
+        <Outlet />
+      </main>
+      <Footer />
+    </>
   )
 }

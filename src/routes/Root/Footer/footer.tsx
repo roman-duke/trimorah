@@ -12,14 +12,14 @@ export default function Footer() {
       <nav className="footer-nav">
         <ul className="nav-list">
           <li className="nav-item">
-            <DropDown title={<>Drones & Accessories</>}>
+            <DropDown title="Drones & Accessories">
               <li>Optimus</li>
               <li>Bumble Bee</li>
             </DropDown>
           </li>
 
           <li className="nav-item">
-            <DropDown title={<>Software</>}>
+            <DropDown title="Software">
               <li>Dji Terra</li>
               <li>Pix4D</li>
               <li>DroneDeploy</li>
@@ -27,14 +27,14 @@ export default function Footer() {
           </li>
 
           <li className="nav-item">
-            <DropDown title={<>Industries</>}>
+            <DropDown title="Industries">
               <li>Agriculture</li>
               <li>Environmental Conservation</li>
             </DropDown>
           </li>
 
           <li className="nav-item">
-            <DropDown title={<>Services</>}>
+            <DropDown title="Services">
               <li>Precision Agriculture</li>
               <li>Aerial Mapping and Surveying</li>
             </DropDown>
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="credit">
-          <span>2023 © All rights reserved to Trimorah</span>
+          <span>{new Date().getFullYear()} © All rights reserved to Trimorah</span>
           <span>Developed by Gravenite</span>
         </div>
       </section>

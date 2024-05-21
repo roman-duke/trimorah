@@ -54,10 +54,12 @@ export default function DropDown({title, children} : AuxProps) {
 
   return (
     <>
-      <div className="item-description">
-        <a href="#">{title}</a>
+      <div 
+        className="item-description"
+        onClick={() => toggleCard(0)} 
+      >
+        <a>{title}</a>
         <motion.span 
-          onClick={() => toggleCard(0)} 
           className="mobile-toggle"
           variants={menuToggle}
           animate={clicked && activeCard == 0 ? "show" : "hide"}

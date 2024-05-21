@@ -1,16 +1,27 @@
 .header {
   display: flex;
   width: 100vw;
-  padding: 1rem 2rem;
+  padding: calc(var(--gap-padding) * 0.2) var(--gap-padding);
   justify-content: space-between;
   align-items: center;
-  // overflow: hidden;
+
+  position: relative;
+  box-shadow: 0 0.1rem 0.2rem var(--secondary-color);
 
   .company-description {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     color: var(--secondary-color);
+
+    .company-img {
+      width: 50px;
+      object-fit: cover;
+    }
+
+    .company-title {
+      font-size: 2rem;
+    }
   }
 
   .menu-icon {
@@ -25,42 +36,69 @@
       height: 0.3rem;
       margin: 0.3rem 0;
       
-      // background-color: var(--secondary-color);
       background-color: #fff;
     }
   }
 }
 
 .navbar {
-
-  .nav-links-wrapper {
-    position: absolute;
-    overflow-x: hidden;
-    height: 100vh;
-    // width: 23rem;
-    width: 100vw;
-    right: 0;
-    top: 0;
+  // display: none;
+  color: #fff;
 
     .nav-links {
-      height: 100%;
-      // width: 18rem;
-      width: 100vw;
-      padding: 15rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      padding: calc(5vh * 3) calc(var(--gap-padding) * 1.25) calc(var(--gap-padding) * 1.4);
+
+      position: fixed;
       top: 0;
-      // right: -18rem;
-      right: -100vw;
       z-index: 1;
 
-      background-color: var(--secondary-color);
+      // background-color: var(--secondary-color);
+      background-color: #000;
       font-family: "Hind";
 
       .link {
-        font-size: 2.5rem;
+        // padding: 0.5rem 0;
+        font-size: 4rem;
       }
-    }
+
+      .nav-main {
+
+        .main-header {
+          text-transform: uppercase;
+          border-bottom: 0.1rem solid var(--primary-color-one);
+          opacity: 0.4;
+        }
+      }
+
+      .nav-socials {
+
+        .socials-footer {
+          text-transform: uppercase;
+          padding-top: 2.5rem;
+          border-top: 0.1rem solid var(--primary-color-one);
+          opacity: 0.4;
+        }
+
+        .social-links {
+          display: flex;
+          justify-content: space-between;
+          
+          a {
+            display: flex;
+            
+            span {
+              color: #e0e0e0;
+              margin-left: .75rem;
+            }
+          }
+        }
+      }
   }
 
 }
